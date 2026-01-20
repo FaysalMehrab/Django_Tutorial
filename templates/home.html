@@ -18,7 +18,27 @@
         07. Then we added the url in core/urls.py with include() from django.urls. <br> 
         08. Then by running the server again with "python manage.py runserver" we printed <b>'This is Mehrab And Learning Django'</b>
         09. Then we created 'templates' folder in the root dir and added that in 'core/settings.py' -> TEMPLATES -> DIR: [BASE_DIR/'templates']. <br>
-        10. Then we removed our previous http(txt) return from pages/views.py and switched to render(HTML) and returned a dictionary with year.<br>
+        10. Then we removed our previous http(txt) return from pages/views.py and switched to render(HTML) and returned a dictionary with year.<br><br><br>
+
+    </p>
+
+
+        <h1>My Blog</h1>
+
+        <hr>
+        {% for post in posts%}
+        <div style="border-bottom: 1px solid #ccc; padding: 10px;">
+
+            <h2>{{post.title}}</h2>
+            <p>{{post.content}}</p>
+
+            </div>
+            {% endfor %}
+
+            <br>
+
+            <footer> Copyright {{year}} </footer>
+
     </body>
 
 </html>

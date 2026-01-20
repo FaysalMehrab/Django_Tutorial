@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New Post</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Create a New Post</h1>
+    
+    <div class="post-container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save Post</button>
+        </form>
+    </div>
+    
+    <br>
+    <a href="{% url 'home' %}">Cancel</a>
+</body>
+</html>

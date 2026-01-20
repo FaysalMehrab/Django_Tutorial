@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+<title> This is the Title For the Django templates </title>
+</head>
+<body>
+    <h1> Lets learn and note Django </h1>
+    <p>Current Year: {{year}}</p>
+    <p>Learning day: {{day}}</p>
+    <h3> Steps I followed This Far: </h3>
+    <p> 01. First created Djando core file with "django-admin startproject core ." the '.' represent the root file, no subfolder will be created. <br>
+        02. Then we tested the connection by running "python manage.py runserver", which provide us with a link that shows the connection is done. <br>
+        03. Then we created our first app called /pages by running "python manage.py startapp pages" which created a app called 'pages' in the root <br>
+        04. Then then we added the app into our core/settings.py -> INSTALLED_APPS. <br>
+        05. Then we returned <b>'This is Mehrab And Learning Django'</b> with HttpResponse from django.http inside home function. <br>
+        06. Then we created a urls.py file for django to know when to use the views.py. We imported path from django.urls and home function from .views. <br>
+        07. Then we added the url in core/urls.py with include() from django.urls. <br> 
+        08. Then by running the server again with "python manage.py runserver" we printed <b>'This is Mehrab And Learning Django'</b>
+        09. Then we created 'templates' folder in the root dir and added that in 'core/settings.py' -> TEMPLATES -> DIR: [BASE_DIR/'templates']. <br>
+        10. Then we removed our previous http(txt) return from pages/views.py and switched to render(HTML) and returned a dictionary with year.<br>
+    </body>
+
+</html>

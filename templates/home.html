@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html>
     <head>
 <title> This is the Title For the Django templates </title>
+<link rel = "stylesheet" href = "{% static 'css\style.css' %}">
 </head>
 <body>
     <h1> Lets learn and note Django </h1>
@@ -27,9 +29,12 @@
 
         <hr>
         {% for post in posts%}
-        <div style="border-bottom: 1px solid #ccc; padding: 10px;">
+        <div class="post-container">
 
-            <h2>{{post.title}}</h2>
+            <h2>
+                <a href = "{% url 'post_detail'  post.pk %}"> {{post.title}} </a>
+            
+            </h2>
             <p>{{post.content}}</p>
 
             </div>
